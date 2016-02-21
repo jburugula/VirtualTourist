@@ -10,9 +10,9 @@
 		E148D25F1C73E87300385396 /* FlickrConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148D25E1C73E87300385396 /* FlickrConstants.swift */; };
 		E148D2611C73E90B00385396 /* FlickrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148D2601C73E90B00385396 /* FlickrClient.swift */; };
 		E148D2631C73EA6100385396 /* FlickrConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148D2621C73EA6100385396 /* FlickrConvenience.swift */; };
+		E1B41B5B1C79A58200639F9A /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B41B5A1C79A58200639F9A /* CoreDataStackManager.swift */; };
 		E1B8C7591C66B96B006E9FEE /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8C7581C66B96B006E9FEE /* Pin.swift */; };
 		E1B8C75B1C66B99D006E9FEE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8C75A1C66B99D006E9FEE /* Photo.swift */; };
-		E1BBB0F11C680DFF00949850 /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BBB0F01C680DFF00949850 /* CoreDataStackManager.swift */; };
 		E1C051761C66ECA300948D84 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1C051741C66ECA300948D84 /* Model.xcdatamodeld */; };
 		E1C2DD551C765AF20022D61E /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DD541C765AF20022D61E /* PhotoAlbumViewController.swift */; };
 		E1C2DD571C765C6D0022D61E /* PhotoAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2DD561C765C6D0022D61E /* PhotoAlbumCollectionViewCell.swift */; };
@@ -46,9 +46,9 @@
 		E148D25E1C73E87300385396 /* FlickrConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrConstants.swift; sourceTree = "<group>"; };
 		E148D2601C73E90B00385396 /* FlickrClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrClient.swift; sourceTree = "<group>"; };
 		E148D2621C73EA6100385396 /* FlickrConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrConvenience.swift; sourceTree = "<group>"; };
+		E1B41B5A1C79A58200639F9A /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
 		E1B8C7581C66B96B006E9FEE /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		E1B8C75A1C66B99D006E9FEE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		E1BBB0F01C680DFF00949850 /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStackManager.swift; path = "../../ios-persistence-2.0/CoreDataFavoriteActors/FavoriteActors/CoreDataStackManager.swift"; sourceTree = "<group>"; };
 		E1C051751C66ECA300948D84 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E1C2DD541C765AF20022D61E /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		E1C2DD561C765C6D0022D61E /* PhotoAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -124,9 +124,9 @@
 				E148D2601C73E90B00385396 /* FlickrClient.swift */,
 				E1C051741C66ECA300948D84 /* Model.xcdatamodeld */,
 				E1B8C7581C66B96B006E9FEE /* Pin.swift */,
-				E1BBB0F01C680DFF00949850 /* CoreDataStackManager.swift */,
 				E1B8C75A1C66B99D006E9FEE /* Photo.swift */,
 				E1EDC99D1C5D3D2F009E432B /* Main.storyboard */,
+				E1B41B5A1C79A58200639F9A /* CoreDataStackManager.swift */,
 				E1EDC9A31C5D3D2F009E432B /* Assets.xcassets */,
 				E1EDC9A51C5D3D2F009E432B /* LaunchScreen.storyboard */,
 				E1EDC9A81C5D3D2F009E432B /* Info.plist */,
@@ -288,7 +288,7 @@
 				E148D25F1C73E87300385396 /* FlickrConstants.swift in Sources */,
 				E1C2DD551C765AF20022D61E /* PhotoAlbumViewController.swift in Sources */,
 				E1EDC99C1C5D3D2F009E432B /* ViewController.swift in Sources */,
-				E1BBB0F11C680DFF00949850 /* CoreDataStackManager.swift in Sources */,
+				E1B41B5B1C79A58200639F9A /* CoreDataStackManager.swift in Sources */,
 				E1B8C75B1C66B99D006E9FEE /* Photo.swift in Sources */,
 				E1B8C7591C66B96B006E9FEE /* Pin.swift in Sources */,
 				E1EDC99A1C5D3D2F009E432B /* AppDelegate.swift in Sources */,
