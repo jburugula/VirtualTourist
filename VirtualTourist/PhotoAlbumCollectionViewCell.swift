@@ -14,4 +14,13 @@ class PhotoAlbumCollectionViewCell : UICollectionViewCell {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet var imageView: UIImageView!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        if imageView.image == nil {
+            
+            activityIndicator.startAnimating()
+        }
+    }
 }

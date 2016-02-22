@@ -37,9 +37,28 @@ class Photo : NSManagedObject {
         self.pins = pin
     }
     
+    
+    func getPathForPhoto() -> NSURL{
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        let imageURL =   NSURL(string: self.imageUrl)!
+        let filepathcomp = imageURL.pathComponents
+        let fileName =  filepathcomp!.last! as String
+        let pathArray = [dirPath,fileName]
+        let fileURL =  NSURL.fileURLWithPathComponents(pathArray)!
+        return fileURL
+    }
+    
     var image: UIImage? {
         
-        if let _ = imageFilename {
+        let localimageURL =  getPathForPhoto()
+      
+        if NSFileManager.defaultManager().fileExistsAtPath(localimageURL.path!) {
+           let data = NSData(contentsOfURL: localimageURL)
+            return UIImage(data: data!)
+        }
+       
+        
+       if let _ = imageFilename {
             
             let fileURL =   NSURL(string: self.imageUrl)!
             
@@ -55,13 +74,7 @@ class Photo : NSManagedObject {
     override func prepareForDeletion() {
         //Delete the associated image file when the Photo managed object is deleted.
         
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-        let imageURL =   NSURL(string: self.imageUrl)!
-        let filepathcomp = imageURL.pathComponents
-        let fileName =  filepathcomp!.last! as String
-        let pathArray = [dirPath,fileName]
-        let fileURL =  NSURL.fileURLWithPathComponents(pathArray)!
-        
+         let fileURL = getPathForPhoto()
         do {
             try NSFileManager.defaultManager().removeItemAtURL(fileURL)
         } catch let error as NSError {

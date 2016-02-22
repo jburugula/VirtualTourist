@@ -219,7 +219,11 @@ class ViewController: UIViewController,MKMapViewDelegate ,NSFetchedResultsContro
     
     func longTap(gestureRecognizer:UIGestureRecognizer) {
         
-    // coordinates of a point the user touched on the map
+     //Drop the Pin only when the long tap ends
+        
+    if gestureRecognizer.state == .Ended {
+        
+        // coordinates of a point the user touched on the map
         
         let touchPoint = gestureRecognizer.locationInView(self.mapView)
         let newCoord:CLLocationCoordinate2D = mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
@@ -244,6 +248,7 @@ class ViewController: UIViewController,MKMapViewDelegate ,NSFetchedResultsContro
             self.mapView.addAnnotation(self.selectedPin)
             
         })
+      }
         
     }
     

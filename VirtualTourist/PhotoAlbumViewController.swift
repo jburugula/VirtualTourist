@@ -126,9 +126,11 @@ class PhotoAlbumViewController : UIViewController , UICollectionViewDelegate , N
     }
     
     func collectionView(tableView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView?.dequeueReusableCellWithReuseIdentifier("PhotoAlbumCollectionViewCell", forIndexPath: indexPath) as! PhotoAlbumCollectionViewCell
-        let photo = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
         
+        let cell = collectionView?.dequeueReusableCellWithReuseIdentifier("PhotoAlbumCollectionViewCell", forIndexPath: indexPath) as! PhotoAlbumCollectionViewCell
+        
+        let photo = fetchedResultsController.objectAtIndexPath(indexPath) as! Photo
+         
         // reset pevious images in the cell
         cell.imageView.image = nil
         
@@ -136,9 +138,9 @@ class PhotoAlbumViewController : UIViewController , UICollectionViewDelegate , N
         cell.activityIndicator.startAnimating()
         
         // if there is an image, update the cell appropriately
-        if photo.imageFilename != nil {
+        if photo.image != nil {
             
-            
+            cell.activityIndicator.hidden = true
             cell.activityIndicator.stopAnimating()
             cell.imageView.alpha = 0.0
             cell.imageView.image = photo.image
@@ -147,7 +149,13 @@ class PhotoAlbumViewController : UIViewController , UICollectionViewDelegate , N
                 animations: { cell.imageView.alpha = 1.0 })
         }
         
-        
+        else{
+            cell.imageView.image = UIImage(named: "placeholder")
+            cell.activityIndicator.hidden = false
+            cell.activityIndicator.startAnimating()
+            cell.imageView.alpha = 0.5
+            
+            }
         return cell
     }
     
